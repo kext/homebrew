@@ -14,6 +14,8 @@ class R < Formula
   depends_on "readline"
   depends_on "xz"
   depends_on "cairo"
+  depends_on "pango"
+  depends_on :x11
   depends_on "openblas" => :optional
   depends_on :java => :optional
 
@@ -37,7 +39,7 @@ class R < Formula
       "--prefix=#{prefix}",
       "--enable-memory-profiling",
       "--with-cairo",
-      "--without-x",
+      "--with-x",
       "--with-aqua",
       "--with-lapack",
       "--enable-R-shlib",
